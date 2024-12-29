@@ -5,125 +5,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Hriday Raj</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
 
-        header {
-            background-color: #333;
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
             color: white;
-            padding: 1rem 0;
+        }
+
+        /* Background Particles */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            z-index: -1;
+        }
+
+        /* Centered Text */
+        .intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        nav {
-            margin: 1rem 0;
-        }
-
-        nav a {
+        .intro h1 {
+            font-size: 3rem;
             color: white;
+            margin-bottom: 1rem;
+        }
+
+        .intro h1 span {
+            color: #f05454;
+        }
+
+        .intro p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .intro a {
+            display: inline-block;
             text-decoration: none;
-            margin: 0 1rem;
+            color: #f05454;
+            border: 2px solid #f05454;
+            padding: 0.5rem 2rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        section {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        .project {
-            margin-bottom: 1.5rem;
-        }
-
-        .project h3 {
-            color: #555;
-        }
-
-        .project p {
-            margin: 0.5rem 0;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
+        .intro a:hover {
+            background: #f05454;
             color: white;
-        }
-
-        .links a {
-            color: #4CAF50;
-            text-decoration: none;
-            margin: 0 0.5rem;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Hriday Raj</h1>
-        <nav>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <!-- Particle.js container -->
+    <div id="particles-js"></div>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Recommender Systems</h3>
-            <p>Developed personalized recommendation algorithms including Apriori, Graph Neural Networks (GNN), and Singular Value Decomposition (SVD).</p>
-            <p>Focus: Optimized marketing strategies, relational data modeling, and dimensionality reduction.</p>
-        </div>
-        <div class="project">
-            <h3>Buddhabrot Visualization</h3>
-            <p>Implemented advanced visualization techniques in C for generating Buddhabrot fractals.</p>
-            <p>Focus: Complex number calculations and high-resolution image generation.</p>
-        </div>
-        <div class="project">
-            <h3>Bankruptcy Indicators Visualization</h3>
-            <p>Analyzed and visualized financial data to identify potential bankruptcy indicators.</p>
-            <p>Focus: Interactive dashboards and data storytelling.</p>
-        </div>
-    </section>
+    <!-- Introduction Section -->
+    <div class="intro">
+        <h1>Hello, I'm <span>Hriday.</span></h1>
+        <p>I'm a Computer Science and Data Science major.</p>
+        <a href="#projects">View my work ↓</a>
+    </div>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Programming:</strong> Python, C, R, React Native, SQL</li>
-            <li><strong>Data Visualization:</strong> Matplotlib, Seaborn, Tableau</li>
-            <li><strong>Deep Learning Frameworks:</strong> PyTorch, TensorFlow, Keras</li>
-            <li><strong>Tools:</strong> Git, Jira, Confluence</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p><strong>Email:</strong> <a href="mailto:1hridayraj@gmail.com">1hridayraj@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hridayraj" target="_blank">https://www.linkedin.com/in/hridayraj</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Hriday Raj</p>
-    </footer>
+    <script>
+        /* Initialize Particle.js */
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    },
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                }
+            },
+            retina_detect: true
+        });
+    </script>
 </body>
 
 </html>
