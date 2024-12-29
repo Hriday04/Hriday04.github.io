@@ -1,43 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    header {
-      background: #333;
-      color: white;
-      padding: 1rem 0;
-      text-align: center;
-    }
-    section {
-      padding: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background: #333;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Hriday Raj</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin: 1rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .project {
+            margin-bottom: 1.5rem;
+        }
+
+        .project h3 {
+            color: #555;
+        }
+
+        .project p {
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: white;
+        }
+
+        .links a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-  </header>
-  <section>
-    <h2>About Me</h2>
-    <p>This is where you can write about yourself, your skills, and your projects.</p>
-  </section>
-  <footer>
-    <p>&copy; 2024 My Name</p>
-  </footer>
+    <header>
+        <h1>Hriday Raj</h1>
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Recommender Systems</h3>
+            <p>Developed personalized recommendation algorithms including Apriori, Graph Neural Networks (GNN), and Singular Value Decomposition (SVD).</p>
+            <p>Focus: Optimized marketing strategies, relational data modeling, and dimensionality reduction.</p>
+        </div>
+        <div class="project">
+            <h3>Buddhabrot Visualization</h3>
+            <p>Implemented advanced visualization techniques in C for generating Buddhabrot fractals.</p>
+            <p>Focus: Complex number calculations and high-resolution image generation.</p>
+        </div>
+        <div class="project">
+            <h3>Bankruptcy Indicators Visualization</h3>
+            <p>Analyzed and visualized financial data to identify potential bankruptcy indicators.</p>
+            <p>Focus: Interactive dashboards and data storytelling.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Programming:</strong> Python, C, R, React Native, SQL</li>
+            <li><strong>Data Visualization:</strong> Matplotlib, Seaborn, Tableau</li>
+            <li><strong>Deep Learning Frameworks:</strong> PyTorch, TensorFlow, Keras</li>
+            <li><strong>Tools:</strong> Git, Jira, Confluence</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:1hridayraj@gmail.com">1hridayraj@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hridayraj" target="_blank">https://www.linkedin.com/in/hridayraj</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hriday Raj</p>
+    </footer>
 </body>
+
 </html>
