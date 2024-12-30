@@ -128,57 +128,64 @@
 
         /* About Section */
         .about-skills {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
             padding: 4rem 2rem;
             background-color: #111;
-            color: white;
         }
 
-        .about-left {
-            width: 50%;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .about {
+            text-align: left;
+            margin-bottom: 3rem;
         }
 
-        .profile-icon {
-            margin-bottom: 2rem;
+        .about h2 {
+            font-size: 2.5rem;
+            color: #f05454;
+            margin-bottom: 1.5rem;
         }
 
-        .about-text {
+        .about p {
             font-size: 1.2rem;
             line-height: 1.8;
-            max-width: 500px;
+            max-width: 800px;
             color: #ddd;
-            text-align: left;
         }
 
-        .skills-grid {
+        /* Skills Section */
+        .skills {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            width: 40%;
+            padding: 2rem;
+            justify-content: center;
         }
 
-        .skill-card {
+        .skill {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.1);
             padding: 1rem;
             border-radius: 10px;
-            font-size: 1rem;
-            font-weight: bold;
-            text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
 
-        .skill-card:hover {
+        .skill:hover {
             transform: scale(1.1);
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .skill img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill p {
+            font-size: 1rem;
+            color: white;
+            margin: 0;
         }
 
         /* Projects Section */
@@ -263,44 +270,53 @@
 
     <!-- About Section -->
     <div id="about" class="about-skills">
-        <!-- Left Section: Profile and About Text -->
-        <div class="about-left">
-            <div class="profile-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="150" height="150">
-                    <circle cx="32" cy="32" r="30" stroke="#fff" stroke-width="2" fill="none" />
-                    <circle cx="32" cy="24" r="12" stroke="#fff" stroke-width="2" fill="none" />
-                    <path d="M16 48c0-9 7-16 16-16s16 7 16 16" stroke="#fff" stroke-width="2" fill="none" />
-                </svg>
-            </div>
-            <p class="about-text">
-                Fully committed to the philosophy of life-long learning, I’m a Computer Science and Data Science student with a deep passion for AI, machine learning, and problem-solving through technology. Whether it’s crafting solutions using data visualization or implementing algorithms, I thrive on creativity and innovation. When not working on projects, I enjoy reading, exploring new tools, and staying active.
+        <div class="about">
+            <h2>About Me</h2>
+            <p>
+                I am a Computer Science and Data Science student with experience in AI, Machine Learning, and advanced data visualization techniques. I’m passionate about solving problems with technology, whether it's through building recommender systems or visualizing complex datasets.
             </p>
         </div>
 
-        <!-- Right Section: Skill Cards -->
-        <div class="skills-grid">
-            <div class="skill-card">
+        <!-- Skills Section -->
+        <div class="skills">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
                 <p>Python</p>
             </div>
-            <div class="skill-card">
+            <div class="skill">
+                <img src="https://www.r-project.org/Rlogo.png" alt="R Logo">
                 <p>R</p>
             </div>
-            <div class="skill-card">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL Logo">
                 <p>SQL</p>
             </div>
-            <div class="skill-card">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo">
                 <p>C</p>
             </div>
-            <div class="skill-card">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/a/a7/React-icon.svg" alt="React Logo">
                 <p>React</p>
             </div>
-            <div class="skill-card">
+            <div class="skill">
+                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo">
                 <p>Git</p>
             </div>
-            <div class="skill-card">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Jira_Software_Logo.png" alt="Jira Logo">
+                <p>Jira</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Confluence_Logo.png" alt="Confluence Logo">
+                <p>Confluence</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Microsoft_PowerPoint_logo_%282013-2019%29.png" alt="PowerPoint Logo">
                 <p>PowerPoint</p>
             </div>
-            <div class="skill-card">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Microsoft_Excel_2013-2019_logo.png" alt="Excel Logo">
                 <p>Excel</p>
             </div>
         </div>
