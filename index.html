@@ -29,7 +29,7 @@
             z-index: -1;
         }
 
-        /* Centered Text */
+        /* Centered Content */
         .intro {
             display: flex;
             flex-direction: column;
@@ -55,19 +55,25 @@
             color: white;
         }
 
-        .intro a {
-            display: inline-block;
-            text-decoration: none;
-            color: #f05454;
-            border: 2px solid #f05454;
-            padding: 0.5rem 2rem;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            transition: 0.3s;
+        .buttons {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
         }
 
-        .intro a:hover {
+        .button {
+            text-decoration: none;
+            color: white;
+            border: 2px solid #f05454;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
             background: #f05454;
             color: white;
         }
@@ -82,7 +88,17 @@
     <div class="intro">
         <h1>Hello, I'm <span>Hriday.</span></h1>
         <p>I'm a Computer Science and Data Science major.</p>
-        <a href="#projects">View my work ↓</a>
+
+        <div class="buttons">
+            <!-- GitHub Button -->
+            <a class="button" href="https://github.com/your-github-profile" target="_blank">GitHub</a>
+
+            <!-- LinkedIn Button -->
+            <a class="button" href="https://www.linkedin.com/in/hridayraj" target="_blank">LinkedIn</a>
+
+            <!-- Resume Download Button -->
+            <a class="button" href="path-to-your-resume.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
+        </div>
     </div>
 
     <script>
