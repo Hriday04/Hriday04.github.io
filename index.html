@@ -128,17 +128,13 @@
 
         /* About Section */
         .about-skills {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
             padding: 4rem 2rem;
             background-color: #111;
         }
 
         .about {
-            width: 50%;
             text-align: left;
-            padding-right: 2rem;
+            margin-bottom: 3rem;
         }
 
         .about h2 {
@@ -154,12 +150,12 @@
             color: #ddd;
         }
 
+        /* Skills Section */
         .skills {
-            width: 50%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
             justify-content: center;
         }
 
@@ -171,21 +167,23 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 1rem;
             border-radius: 10px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
 
         .skill:hover {
             transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
         }
 
         .skill img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             margin-bottom: 0.5rem;
         }
 
         .skill p {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: white;
             margin: 0;
         }
@@ -272,7 +270,6 @@
 
     <!-- About Section -->
     <div id="about" class="about-skills">
-        <!-- About Section -->
         <div class="about">
             <h2>About Me</h2>
             <p>
@@ -299,8 +296,8 @@
                 <p>C</p>
             </div>
             <div class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/a/a7/React-icon.svg" alt="React Native Logo">
-                <p>React Native</p>
+                <img src="https://upload.wikimedia.org/wikipedia/a/a7/React-icon.svg" alt="React Logo">
+                <p>React</p>
             </div>
             <div class="skill">
                 <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo">
@@ -329,9 +326,6 @@
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-list">
-            <!-- Buddhabrot removed -->
-
-            <!-- Apriori Algorithm -->
             <div class="project-item">
                 <div>
                     <h3>Apriori Algorithm</h3>
@@ -339,8 +333,6 @@
                     <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/apriori_475.py" target="_blank">View Code</a>
                 </div>
             </div>
-
-            <!-- Bankruptcy Visualization -->
             <div class="project-item">
                 <div>
                     <h3>Bankruptcy Visualization</h3>
