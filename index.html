@@ -18,7 +18,7 @@
             font-family: 'Arial', sans-serif;
             color: white;
             scroll-behavior: smooth;
-            background-color: #000001;
+            background-color: #000000;
         }
 
         /* Background Particles */
@@ -127,10 +127,18 @@
         }
 
         /* About Section */
-        .about {
+        .about-skills {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             padding: 4rem 2rem;
             background-color: #111;
-            text-align: center;
+        }
+
+        .about {
+            width: 50%;
+            text-align: left;
+            padding-right: 2rem;
         }
 
         .about h2 {
@@ -143,8 +151,43 @@
             font-size: 1.2rem;
             line-height: 1.8;
             max-width: 800px;
-            margin: 0 auto;
             color: #ddd;
+        }
+
+        .skills {
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+        }
+
+        .skill img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill p {
+            font-size: 0.9rem;
+            color: white;
+            margin: 0;
         }
 
         /* Projects Section */
@@ -236,12 +279,51 @@
     </div>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            I am a Computer Science and Data Science student with experience in AI, Machine Learning, and advanced data visualization techniques. I’m passionate about solving problems with technology, whether it's through building recommender systems or visualizing complex datasets.
-        </p>
-    </section>
+    <div id="about" class="about-skills">
+        <!-- About Section -->
+        <div class="about">
+            <h2>About Me</h2>
+            <p>
+                I am a Computer Science and Data Science student with experience in AI, Machine Learning, and advanced data visualization techniques. I’m passionate about solving problems with technology, whether it's through building recommender systems or visualizing complex datasets.
+            </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="skills">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
+                <p>Python</p>
+            </div>
+            <div class="skill">
+                <img src="https://www.r-project.org/Rlogo.png" alt="R Logo">
+                <p>R</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL Logo">
+                <p>SQL</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo">
+                <p>C</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Native Logo">
+                <p>React Native</p>
+            </div>
+            <div class="skill">
+                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo">
+                <p>Git</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Jira_Software_Logo.png" alt="Jira Logo">
+                <p>Jira</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Confluence_Logo.png" alt="Confluence Logo">
+                <p>Confluence</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
