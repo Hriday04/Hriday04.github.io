@@ -30,6 +30,44 @@
             background: #000;
         }
 
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f05454;
+        }
+
         /* Introduction Section */
         .intro {
             display: flex;
@@ -38,6 +76,7 @@
             justify-content: center;
             height: 100vh;
             text-align: center;
+            padding-top: 4rem;
         }
 
         .intro h1 {
@@ -138,7 +177,7 @@
         /* Experience Section */
         .experience {
             padding: 4rem 2rem;
-            background: #000;
+            background: #111;
         }
 
         .experience h2 {
@@ -185,6 +224,39 @@
             margin-bottom: 0.5rem;
             line-height: 1.5;
         }
+
+        /* Projects Section */
+        .projects {
+            padding: 4rem 2rem;
+            background: #222;
+        }
+
+        .projects h2 {
+            font-size: 2.5rem;
+            color: #f05454;
+            margin-bottom: 2rem;
+        }
+
+        .project-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .project-item {
+            margin-bottom: 2rem;
+        }
+
+        .project-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .project-item p {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
     </style>
 </head>
 
@@ -192,15 +264,26 @@
     <!-- Particle.js container -->
     <div id="particles-js"></div>
 
+    <!-- Header -->
+    <header>
+        <h1>Hriday Raj</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </header>
+
     <!-- Introduction Section -->
-    <div class="intro">
+    <div id="home" class="intro">
         <h1>Hello, I'm <span>Hriday.</span></h1>
         <p>I'm a Computer Science and Data Science major.</p>
         <a class="resume-button" href="resume_HR.docx.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
     </div>
 
     <!-- About and Skills Section -->
-    <div class="about-skills">
+    <div id="about" class="about-skills">
         <!-- About Section -->
         <div class="about">
             <h2>About Me</h2>
@@ -235,11 +318,19 @@
                 <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo">
                 <p>Git</p>
             </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Jira_Software_Logo.png" alt="Jira Logo">
+                <p>Jira</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Confluence_Logo.png" alt="Confluence Logo">
+                <p>Confluence</p>
+            </div>
         </div>
     </div>
 
     <!-- Experience Section -->
-    <section class="experience">
+    <section id="experience" class="experience">
         <h2>Experience</h2>
         <div class="timeline">
             <div class="timeline-item">
@@ -259,6 +350,25 @@
                     <li>Developed performance metrics and presented actionable insights.</li>
                     <li>Built a data pipeline for continuous improvement in analysis.</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>Recommender Systems</h3>
+                <p>Developed diverse recommender systems using Apriori, GNN, and SVD algorithms to enhance personalization.</p>
+            </div>
+            <div class="project-item">
+                <h3>Buddhabrot Visualization</h3>
+                <p>Implemented advanced visualization techniques for generating Buddhabrot fractals in C.</p>
+            </div>
+            <div class="project-item">
+                <h3>Bankruptcy Indicators Visualization</h3>
+                <p>Analyzed financial data to create dashboards that identify bankruptcy indicators.</p>
             </div>
         </div>
     </section>
