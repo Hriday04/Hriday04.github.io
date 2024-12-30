@@ -18,7 +18,136 @@
             font-family: 'Arial', sans-serif;
             color: white;
             scroll-behavior: smooth;
-            background-color: #000000;
+            background-color: #000001;
+        }
+
+        /* Background Particles */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header .links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        header .links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+
+        header .links a:hover {
+            color: #f05454;
+        }
+
+        header nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #f05454;
+        }
+
+        /* Introduction Section */
+        .intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding-top: 4rem;
+        }
+
+        .intro h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .intro h1 span {
+            color: #f05454;
+        }
+
+        .intro p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .resume-button {
+            text-decoration: none;
+            color: white;
+            border: 2px solid #f05454;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .resume-button:hover {
+            background: #f05454;
+            color: white;
+        }
+
+        /* About Section */
+        .about-skills {
+            padding: 4rem 2rem;
+            background-color: #111;
+        }
+
+        .about {
+            text-align: left;
+            margin-bottom: 3rem;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #f05454;
+            margin-bottom: 1.5rem;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            color: #ddd;
         }
 
         /* Skills Section */
@@ -26,9 +155,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 2rem;
-            padding: 4rem 2rem;
-            justify-items: center;
-            background: #000;
+            padding: 2rem;
+            justify-content: center;
         }
 
         .skill {
@@ -36,79 +164,282 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 1.5rem;
-            background: linear-gradient(145deg, #1a1a1a, #000000);
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6), -4px -4px 10px rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
 
         .skill:hover {
-            transform: scale(1.05);
-            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7), -6px -6px 12px rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
         }
 
         .skill img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 0.5rem; /* Reduced spacing */
+            width: 60px;
+            height: 60px;
+            margin-bottom: 0.5rem;
         }
 
         .skill p {
             font-size: 1rem;
             color: white;
             margin: 0;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 4rem 2rem;
+            background: #111;
+        }
+
+        .projects h2 {
+            font-size: 2.5rem;
+            color: #f05454;
+            margin-bottom: 2rem;
+        }
+
+        .project-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .project-item {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .project-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .project-item p {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+
+        .project-item a {
+            text-decoration: none;
+            color: #f05454;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .project-item a:hover {
+            color: #fff;
         }
     </style>
 </head>
 
 <body>
-    <!-- Skills Section -->
-    <div id="skills" class="skills">
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
-            <p>Python</p>
+    <!-- Particle.js container -->
+    <div id="particles-js"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="links">
+            <a href="https://github.com/Hriday04/Hriday04.github.io" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20">
+                GitHub
+            </a>
+            <a href="https://linkedin.com/in/hridayraj" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="20">
+                LinkedIn
+            </a>
+            <a href="Hriday_Raj_Resume.pdf" download="Hriday_Raj_Resume.pdf">Resume</a>
         </div>
-        <div class="skill">
-            <img src="https://www.r-project.org/Rlogo.png" alt="R Logo">
-            <p>R</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+        </nav>
+    </header>
+
+    <!-- Introduction Section -->
+    <div id="home" class="intro">
+        <h1>Hello, I'm <span>Hriday.</span></h1>
+        <p>I'm a Computer Science and Data Science major.</p>
+        <a class="resume-button" href="Hriday_Raj_Resume.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="about-skills">
+        <div class="about">
+            <h2>About Me</h2>
+            <p>
+                I am a Computer Science and Data Science student with experience in AI, Machine Learning, and advanced data visualization techniques. I’m passionate about solving problems with technology, whether it's through building recommender systems or visualizing complex datasets.
+            </p>
         </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL Logo">
-            <p>SQL</p>
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo">
-            <p>C</p>
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/a/a7/React-icon.svg" alt="React Logo">
-            <p>React</p>
-        </div>
-        <div class="skill">
-            <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo">
-            <p>Git</p>
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Jira_Software_Logo.png" alt="Jira Logo">
-            <p>Jira</p>
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Confluence_Logo.png" alt="Confluence Logo">
-            <p>Confluence</p>
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Microsoft_PowerPoint_logo_%282013-2019%29.png" alt="PowerPoint Logo">
-            <p>PowerPoint</p>
-        </div>
-        <div class="skill">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Microsoft_Excel_2013-2019_logo.png" alt="Excel Logo">
-            <p>Excel</p>
+
+        <!-- Skills Section -->
+        <div class="skills">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
+                <p>Python</p>
+            </div>
+            <div class="skill">
+                <img src="https://www.r-project.org/Rlogo.png" alt="R Logo">
+                <p>R</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL Logo">
+                <p>SQL</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo">
+                <p>C</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/a/a7/React-icon.svg" alt="React Logo">
+                <p>React</p>
+            </div>
+            <div class="skill">
+                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo">
+                <p>Git</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Jira_Software_Logo.png" alt="Jira Logo">
+                <p>Jira</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Confluence_Logo.png" alt="Confluence Logo">
+                <p>Confluence</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Microsoft_PowerPoint_logo_%282013-2019%29.png" alt="PowerPoint Logo">
+                <p>PowerPoint</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Microsoft_Excel_2013-2019_logo.png" alt="Excel Logo">
+                <p>Excel</p>
+            </div>
         </div>
     </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <!-- Buddhabrot Project -->
+            <div class="project-item">
+                <div>
+                    <h3>Buddhabrot Visualization</h3>
+                    <p>Implemented advanced visualization techniques for generating Buddhabrot fractals in C.</p>
+                    <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/brot.c" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <!-- Apriori Algorithm -->
+            <div class="project-item">
+                <div>
+                    <h3>Apriori Algorithm</h3>
+                    <p>Developed a Python implementation of the Apriori algorithm for association rule mining.</p>
+                    <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/apriori_475.py" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <!-- Bankruptcy Visualization -->
+            <div class="project-item">
+                <div>
+                    <h3>Bankruptcy Visualization</h3>
+                    <p>Visualized bankruptcy data through an interactive HTML-based dashboard.</p>
+                    <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/Bankruptcy_Visualization.html" target="_blank">View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /* Initialize Particle.js */
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    },
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                }
+            },
+            retina_detect: true
+        });
+    </script>
 </body>
 
 </html>
