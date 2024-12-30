@@ -46,17 +46,32 @@
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
-        header h1 {
-            font-size: 1.5rem;
-            margin: 0;
+        header .links {
+            display: flex;
+            gap: 1.5rem;
         }
 
-        nav {
+        header .links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+
+        header .links a:hover {
+            color: #f05454;
+        }
+
+        header nav {
             display: flex;
             gap: 2rem;
         }
 
-        nav a {
+        header nav a {
             text-decoration: none;
             color: white;
             font-size: 1rem;
@@ -64,7 +79,7 @@
             transition: color 0.3s;
         }
 
-        nav a:hover {
+        header nav a:hover {
             color: #f05454;
         }
 
@@ -225,37 +240,46 @@
             line-height: 1.5;
         }
 
-        /* Projects Section */
-        .projects {
+        /* Contact Section */
+        .contact {
             padding: 4rem 2rem;
             background: #222;
+            text-align: center;
         }
 
-        .projects h2 {
+        .contact h2 {
             font-size: 2.5rem;
             color: #f05454;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ddd;
             margin-bottom: 2rem;
         }
 
-        .project-list {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
         }
 
-        .project-item {
-            margin-bottom: 2rem;
-        }
-
-        .project-item h3 {
-            margin: 0;
-            font-size: 1.5rem;
+        .contact-links a {
+            text-decoration: none;
             color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 2px solid #f05454;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s;
         }
 
-        .project-item p {
-            margin: 0.5rem 0;
-            line-height: 1.5;
+        .contact-links a:hover {
+            background: #f05454;
+            color: white;
         }
     </style>
 </head>
@@ -266,12 +290,23 @@
 
     <!-- Header -->
     <header>
-        <h1>Hriday Raj</h1>
+        <div class="links">
+            <a href="https://github.com/your-github-profile" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20">
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="20">
+                LinkedIn
+            </a>
+            <a href="resume_HR.docx.pdf" download="Hriday_Raj_Resume.pdf">Resume</a>
+        </div>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -329,47 +364,13 @@
         </div>
     </div>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>AI/ML Intern - Bahwan Cybertek</h3>
-                <span>June 2023 - August 2023</span>
-                <ul>
-                    <li>Developed a custom keyword extraction tool using advanced NLP techniques.</li>
-                    <li>Optimized costs for feedback management systems.</li>
-                    <li>Conducted detailed research and validation to improve system performance.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Project Manager - Willamette University Athletics</h3>
-                <span>May 2024 - Present</span>
-                <ul>
-                    <li>Led defensive strategy analysis using HUDL.</li>
-                    <li>Developed performance metrics and presented actionable insights.</li>
-                    <li>Built a data pipeline for continuous improvement in analysis.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project-item">
-                <h3>Recommender Systems</h3>
-                <p>Developed diverse recommender systems using Apriori, GNN, and SVD algorithms to enhance personalization.</p>
-            </div>
-            <div class="project-item">
-                <h3>Buddhabrot Visualization</h3>
-                <p>Implemented advanced visualization techniques for generating Buddhabrot fractals in C.</p>
-            </div>
-            <div class="project-item">
-                <h3>Bankruptcy Indicators Visualization</h3>
-                <p>Analyzed financial data to create dashboards that identify bankruptcy indicators.</p>
-            </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me for collaboration, questions, or just to say hi!</p>
+        <div class="contact-links">
+            <a href="mailto:hriday@example.com">Email Me</a>
+            <a href="tel:+1234567890">Call Me</a>
         </div>
     </section>
 
