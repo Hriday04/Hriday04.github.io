@@ -18,6 +18,7 @@
             font-family: 'Arial', sans-serif;
             color: white;
             scroll-behavior: smooth;
+            background-color: #000000;
         }
 
         /* Background Particles */
@@ -25,49 +26,11 @@
             position: fixed;
             width: 100%;
             height: 100%;
-            background: #000000;
             z-index: -1;
+            background: #000;
         }
 
-        /* Fixed Header with Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        header h1 {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-
-        nav {
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #f05454;
-        }
-
-        /* Intro Section */
+        /* Introduction Section */
         .intro {
             display: flex;
             flex-direction: column;
@@ -75,7 +38,6 @@
             justify-content: center;
             height: 100vh;
             text-align: center;
-            padding-top: 4rem; /* Prevent overlap from header */
         }
 
         .intro h1 {
@@ -110,40 +72,40 @@
             color: white;
         }
 
-        /* Page Sections */
-        section {
+        /* About and Skills Section */
+        .about-skills {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             padding: 4rem 2rem;
-            background: #111;
-            color: white;
-            text-align: center;
+            background-color: #111;
         }
 
-        section:nth-child(even) {
-            background: #222;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        /* About Section */
         .about {
-            text-align: center;
+            width: 50%;
+            text-align: left;
+            padding-right: 2rem;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #f05454;
+            margin-bottom: 1rem;
         }
 
         .about p {
             font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
+            line-height: 1.8;
+            color: #ddd;
         }
 
-        /* Skills Section */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        .skills {
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
+            align-items: center;
+            justify-content: center;
         }
 
         .skill {
@@ -151,33 +113,77 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            width: 100px;
-            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
         }
 
         .skill img {
             width: 50px;
             height: 50px;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill p {
+            font-size: 0.9rem;
+            color: white;
+            margin: 0;
         }
 
         /* Experience Section */
-        .experience-container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
+        .experience {
+            padding: 4rem 2rem;
+            background: #000;
         }
 
-        .experience-item {
+        .experience h2 {
+            font-size: 2.5rem;
+            color: #f05454;
             margin-bottom: 2rem;
         }
 
-        .experience-item h3 {
-            margin: 0 0 0.5rem;
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            color: #ddd;
         }
 
-        .experience-item p {
+        .timeline-item {
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .timeline-item p {
             margin: 0.5rem 0;
+        }
+
+        .timeline-item span {
+            display: block;
+            font-size: 0.9rem;
+            color: #f05454;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            list-style: disc;
+        }
+
+        .timeline-item ul li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
         }
     </style>
 </head>
@@ -186,92 +192,73 @@
     <!-- Particle.js container -->
     <div id="particles-js"></div>
 
-    <!-- Header with Navigation -->
-    <header>
-        <h1>Hriday Raj</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-        </nav>
-    </header>
-
     <!-- Introduction Section -->
-    <div id="home" class="intro">
+    <div class="intro">
         <h1>Hello, I'm <span>Hriday.</span></h1>
         <p>I'm a Computer Science and Data Science major.</p>
         <a class="resume-button" href="resume_HR.docx.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
     </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            I am a Computer Science and Data Science student with experience in AI, Machine Learning, and advanced data visualization techniques. I’m passionate about solving problems with technology, whether it's through building recommender systems or visualizing complex datasets.
-        </p>
-    </section>
+    <!-- About and Skills Section -->
+    <div class="about-skills">
+        <!-- About Section -->
+        <div class="about">
+            <h2>About Me</h2>
+            <p>
+                I am a Computer Science and Data Science student with experience in AI, Machine Learning, and advanced data visualization techniques. I’m passionate about solving problems with technology, whether it's through building recommender systems or visualizing complex datasets.
+            </p>
+        </div>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-container">
-            <!-- Python -->
+        <!-- Skills Section -->
+        <div class="skills">
             <div class="skill">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
                 <p>Python</p>
             </div>
-            <!-- R -->
             <div class="skill">
                 <img src="https://www.r-project.org/Rlogo.png" alt="R Logo">
                 <p>R</p>
             </div>
-            <!-- SQL -->
             <div class="skill">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL Logo">
                 <p>SQL</p>
             </div>
-            <!-- C -->
             <div class="skill">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo">
                 <p>C</p>
             </div>
-            <!-- React Native -->
             <div class="skill">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Native Logo">
                 <p>React Native</p>
             </div>
-            <!-- Git -->
             <div class="skill">
                 <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo">
                 <p>Git</p>
             </div>
-            <!-- Jira -->
-            <div class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/en/6/68/Jira_Software_Logo.png" alt="Jira Logo">
-                <p>Jira</p>
-            </div>
-            <!-- Confluence -->
-            <div class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Confluence_Logo.png" alt="Confluence Logo">
-                <p>Confluence</p>
-            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section class="experience">
         <h2>Experience</h2>
-        <div class="experience-container">
-            <div class="experience-item">
+        <div class="timeline">
+            <div class="timeline-item">
                 <h3>AI/ML Intern - Bahwan Cybertek</h3>
-                <p>June 2023 - August 2023</p>
-                <p>Developed a custom keyword extraction tool using advanced NLP techniques, optimizing costs for feedback management systems.</p>
+                <span>June 2023 - August 2023</span>
+                <ul>
+                    <li>Developed a custom keyword extraction tool using advanced NLP techniques.</li>
+                    <li>Optimized costs for feedback management systems.</li>
+                    <li>Conducted detailed research and validation to improve system performance.</li>
+                </ul>
             </div>
-            <div class="experience-item">
+            <div class="timeline-item">
                 <h3>Project Manager - Willamette University Athletics</h3>
-                <p>May 2024 - Present</p>
-                <p>Led defensive strategy analysis using HUDL, developed performance metrics, and visualized data for actionable insights.</p>
+                <span>May 2024 - Present</span>
+                <ul>
+                    <li>Led defensive strategy analysis using HUDL.</li>
+                    <li>Developed performance metrics and presented actionable insights.</li>
+                    <li>Built a data pipeline for continuous improvement in analysis.</li>
+                </ul>
             </div>
         </div>
     </section>
