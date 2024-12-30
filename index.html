@@ -209,8 +209,8 @@
         .project-item {
             margin-bottom: 2rem;
             display: flex;
-            gap: 1rem;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .project-item h3 {
@@ -326,6 +326,16 @@
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-list">
+            <!-- Buddhabrot Project -->
+            <div class="project-item">
+                <div>
+                    <h3>Buddhabrot Visualization</h3>
+                    <p>Implemented advanced visualization techniques for generating Buddhabrot fractals in C.</p>
+                    <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/brot.c" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <!-- Apriori Algorithm -->
             <div class="project-item">
                 <div>
                     <h3>Apriori Algorithm</h3>
@@ -333,6 +343,8 @@
                     <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/apriori_475.py" target="_blank">View Code</a>
                 </div>
             </div>
+
+            <!-- Bankruptcy Visualization -->
             <div class="project-item">
                 <div>
                     <h3>Bankruptcy Visualization</h3>
