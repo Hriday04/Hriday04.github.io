@@ -18,7 +18,7 @@
             font-family: 'Arial', sans-serif;
             color: white;
             scroll-behavior: smooth;
-            background-color: #000000;
+            background-color: #000001;
         }
 
         /* Background Particles */
@@ -131,12 +131,13 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             padding: 4rem 2rem;
             background-color: #111;
         }
 
         .about {
-            width: 50%;
+            width: 40%;
             text-align: left;
         }
 
@@ -156,11 +157,11 @@
         /* Skills Section */
         .skills {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             justify-content: center;
             align-items: center;
-            width: 40%;
+            width: 50%;
         }
 
         .skill {
@@ -169,10 +170,11 @@
             align-items: center;
             justify-content: center;
             background: rgba(255, 255, 255, 0.1);
-            padding: 0.8rem;
+            padding: 1rem;
             border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .skill:hover {
@@ -181,8 +183,8 @@
         }
 
         .skill img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             margin-bottom: 0.3rem;
         }
 
@@ -190,6 +192,53 @@
             font-size: 0.9rem;
             color: white;
             margin: 0;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 4rem 2rem;
+            background: #111;
+        }
+
+        .projects h2 {
+            font-size: 2.5rem;
+            color: #f05454;
+            margin-bottom: 2rem;
+        }
+
+        .project-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .project-item {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .project-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .project-item p {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+        }
+
+        .project-item a {
+            text-decoration: none;
+            color: #f05454;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .project-item a:hover {
+            color: #fff;
         }
 
     </style>
@@ -279,6 +328,125 @@
             </div>
         </div>
     </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <!-- Buddhabrot Project -->
+            <div class="project-item">
+                <div>
+                    <h3>Buddhabrot Visualization</h3>
+                    <p>Implemented advanced visualization techniques for generating Buddhabrot fractals in C.</p>
+                    <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/brot.c" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <!-- Apriori Algorithm -->
+            <div class="project-item">
+                <div>
+                    <h3>Apriori Algorithm</h3>
+                    <p>Developed a Python implementation of the Apriori algorithm for association rule mining.</p>
+                    <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/apriori_475.py" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <!-- Bankruptcy Visualization -->
+            <div class="project-item">
+                <div>
+                    <h3>Bankruptcy Visualization</h3>
+                    <p>Visualized bankruptcy data through an interactive HTML-based dashboard.</p>
+                    <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/Bankruptcy_Visualization.html" target="_blank">View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        /* Initialize Particle.js */
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    },
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                        enable: false,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                    }
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push"
+                    },
+                    resize: true
+                },
+                modes: {
+                    repulse: {
+                        distance: 200,
+                        duration: 0.4
+                    },
+                }
+            },
+            retina_detect: true
+        });
+    </script>
 </body>
 
 </html>
