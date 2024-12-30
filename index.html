@@ -18,7 +18,7 @@
             font-family: 'Arial', sans-serif;
             color: white;
             scroll-behavior: smooth;
-            background-color: #000001;
+            background-color: #000000;
         }
 
         /* Background Particles */
@@ -126,120 +126,6 @@
             color: white;
         }
 
-        /* About and Skills Section */
-        .about-skills {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 4rem 2rem;
-            background-color: #111;
-        }
-
-        .about {
-            width: 50%;
-            text-align: left;
-            padding-right: 2rem;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            color: #f05454;
-            margin-bottom: 1rem;
-        }
-
-        .about p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #ddd;
-        }
-
-        .skills {
-            width: 50%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .skill {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .skill:hover {
-            transform: scale(1.1);
-        }
-
-        .skill img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 0.5rem;
-        }
-
-        .skill p {
-            font-size: 0.9rem;
-            color: white;
-            margin: 0;
-        }
-
-        /* Experience Section */
-        .experience {
-            padding: 4rem 2rem;
-            background: #111;
-        }
-
-        .experience h2 {
-            font-size: 2.5rem;
-            color: #f05454;
-            margin-bottom: 2rem;
-        }
-
-        .timeline {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-            color: #ddd;
-        }
-
-        .timeline-item {
-            margin-bottom: 2rem;
-        }
-
-        .timeline-item h3 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .timeline-item p {
-            margin: 0.5rem 0;
-        }
-
-        .timeline-item span {
-            display: block;
-            font-size: 0.9rem;
-            color: #f05454;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-item ul {
-            margin: 0.5rem 0;
-            padding-left: 1.5rem;
-            list-style: disc;
-        }
-
-        .timeline-item ul li {
-            margin-bottom: 0.5rem;
-            line-height: 1.5;
-        }
-
         /* Projects Section */
         .projects {
             padding: 4rem 2rem;
@@ -260,6 +146,17 @@
 
         .project-item {
             margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .project-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border: 1px solid #f05454;
+            border-radius: 5px;
         }
 
         .project-item h3 {
@@ -271,6 +168,17 @@
         .project-item p {
             margin: 0.5rem 0;
             line-height: 1.5;
+        }
+
+        .project-item a {
+            text-decoration: none;
+            color: #f05454;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .project-item a:hover {
+            color: #fff;
         }
     </style>
 </head>
@@ -286,7 +194,7 @@
                 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20">
                 GitHub
             </a>
-            <a href="linkedin.com/in/hridayraj" target="_blank">
+            <a href="https://linkedin.com/in/hridayraj" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="20">
                 LinkedIn
             </a>
@@ -294,8 +202,6 @@
         </div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
         </nav>
     </header>
@@ -304,88 +210,39 @@
     <div id="home" class="intro">
         <h1>Hello, I'm <span>Hriday.</span></h1>
         <p>I'm a Computer Science and Data Science major.</p>
-        <a class="resume-button" href="resume_HR.docx.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
+        <a class="resume-button" href="Hriday_Raj_Resume.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
     </div>
-
-    <!-- About and Skills Section -->
-    <div id="about" class="about-skills">
-        <!-- About Section -->
-        <div class="about">
-            <h2>About Me</h2>
-            <p>
-                I am a Computer Science and Data Science student with experience in AI, Machine Learning, and advanced data visualization techniques. I’m passionate about solving problems with technology, whether it's through building recommender systems or visualizing complex datasets.
-            </p>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="skills">
-            <div class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
-                <p>Python</p>
-            </div>
-            <div class="skill">
-                <img src="https://www.r-project.org/Rlogo.png" alt="R Logo">
-                <p>R</p>
-            </div>
-            <div class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="SQL Logo">
-                <p>SQL</p>
-            </div>
-            <div class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo">
-                <p>C</p>
-            </div>
-            <div class="skill">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Native Logo">
-                <p>React Native</p>
-            </div>
-            <div class="skill">
-                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo">
-                <p>Git</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>AI/ML Intern - Bahwan Cybertek</h3>
-                <span>June 2023 - August 2023</span>
-                <ul>
-                    <li>Developed a custom keyword extraction tool using advanced NLP techniques.</li>
-                    <li>Optimized costs for feedback management systems.</li>
-                    <li>Conducted detailed research and validation to improve system performance.</li>
-                </ul>
-            </div>
-            <div class="timeline-item">
-                <h3>Project Manager - Willamette University Athletics</h3>
-                <span>May 2024 - Present</span>
-                <ul>
-                    <li>Led defensive strategy analysis using HUDL.</li>
-                    <li>Developed performance metrics and presented actionable insights.</li>
-                    <li>Built a data pipeline for continuous improvement in analysis.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-list">
+            <!-- Buddhabrot -->
             <div class="project-item">
-                <h3>Recommender Systems</h3>
-                <p>Developed diverse recommender systems using Apriori, GNN, and SVD algorithms to enhance personalization.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Buddhabrot_render.jpg" alt="Buddhabrot">
+                <div>
+                    <h3>Buddhabrot Visualization</h3>
+                    <p>Implemented advanced visualization techniques for generating Buddhabrot fractals in C.</p>
+                    <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/brot.c" target="_blank">View Code</a>
+                </div>
             </div>
+
+            <!-- Apriori Algorithm -->
             <div class="project-item">
-                <h3>Buddhabrot Visualization</h3>
-                <p>Implemented advanced visualization techniques for generating Buddhabrot fractals in C.</p>
+                <div>
+                    <h3>Apriori Algorithm</h3>
+                    <p>Developed a Python implementation of the Apriori algorithm for association rule mining.</p>
+                    <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/apriori_475.py" target="_blank">View Code</a>
+                </div>
             </div>
+
+            <!-- Bankruptcy Visualization -->
             <div class="project-item">
-                <h3>Bankruptcy Indicators Visualization</h3>
-                <p>Analyzed financial data to create dashboards that identify bankruptcy indicators.</p>
+                <div>
+                    <h3>Bankruptcy Visualization</h3>
+                    <p>Visualized bankruptcy data through an interactive HTML-based dashboard.</p>
+                    <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/Bankruptcy_Visualization.html" target="_blank">View Code</a>
+                </div>
             </div>
         </div>
     </section>
