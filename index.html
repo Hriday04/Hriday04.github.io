@@ -55,14 +55,7 @@
             color: white;
         }
 
-        .buttons {
-            margin-top: 1rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .button {
+        .resume-button {
             text-decoration: none;
             color: white;
             border: 2px solid #f05454;
@@ -73,7 +66,33 @@
             transition: all 0.3s;
         }
 
-        .button:hover {
+        .resume-button:hover {
+            background: #f05454;
+            color: white;
+        }
+
+        /* Buttons at Bottom-Left */
+        .social-buttons {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-buttons a {
+            text-decoration: none;
+            color: white;
+            border: 2px solid #f05454;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .social-buttons a:hover {
             background: #f05454;
             color: white;
         }
@@ -88,17 +107,13 @@
     <div class="intro">
         <h1>Hello, I'm <span>Hriday.</span></h1>
         <p>I'm a Computer Science and Data Science major.</p>
+        <a class="resume-button" href="Hriday_Raj_Resume.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
+    </div>
 
-        <div class="buttons">
-            <!-- GitHub Button -->
-            <a class="button" href="https://github.com/Hriday04/Hriday04.github.io" target="_blank">GitHub</a>
-
-            <!-- LinkedIn Button -->
-            <a class="button" href="https://www.linkedin.com/in/hridayraj" target="_blank">LinkedIn</a>
-
-            <!-- Resume Download Button -->
-            <a class="button" href="path-to-your-resume.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
-        </div>
+    <!-- Social Buttons at Bottom-Left -->
+    <div class="social-buttons">
+        <a href="https://github.com/your-github-profile" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/hridayraj" target="_blank">LinkedIn</a>
     </div>
 
     <script>
