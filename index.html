@@ -115,16 +115,31 @@
         }
 
         /* Skills Section */
-        .skills {
+        .skills-page {
             background: #111;
             color: white;
+            min-height: 100vh;
             padding: 2rem;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .skills h2 {
+        .skills-header {
+            background: #333;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .skills-header h2 {
+            margin: 0;
             font-size: 2rem;
-            margin-bottom: 1rem;
         }
 
         .skills-container {
@@ -132,6 +147,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 1.5rem;
+            margin-top: 2rem;
         }
 
         .skill {
@@ -159,14 +175,14 @@
     <div class="intro">
         <h1>Hello, I'm <span>Hriday.</span></h1>
         <p>I'm a Computer Science and Data Science major.</p>
-        <a class="resume-button" href="Hriday_Raj_Resume.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
+        <a class="resume-button" href="resume_HR.docx.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
     </div>
 
     <!-- Socials Section -->
     <div class="socials-section">
         <h3>Socials</h3>
         <div class="social-buttons">
-            <a href="https://github.com/Hriday04/Hriday04.github.io" target="_blank">
+            <a href="https://github.com/your-github-profile" target="_blank">
                 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
                 GitHub
             </a>
@@ -178,8 +194,10 @@
     </div>
 
     <!-- Skills Section -->
-    <section class="skills">
-        <h2>My Skills</h2>
+    <section class="skills-page">
+        <div class="skills-header">
+            <h2>My Skills</h2>
+        </div>
         <div class="skills-container">
             <!-- Python -->
             <div class="skill">
