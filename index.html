@@ -300,6 +300,53 @@
             margin: 0.5rem 0;
             line-height: 1.5;
         }
+        /* Education Section */
+        .education {
+            padding: 4rem 2rem;
+            background: #111;
+        }
+
+        .education h2 {
+            font-size: 2.5rem;
+            color: #f05454;
+            margin-bottom: 2rem;
+        }
+
+        .education-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .education-item {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .education-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .education-item p {
+            margin: 0.5rem 0;
+            line-height: 1.5;
+            color: white;
+        }
+        .education-image {
+            display: block;
+            margin: 0 auto 1rem auto; /* Centers the image and adds space below */
+            width: 100%;
+            max-width: 300px; /* Adjust this value as needed */
+            height: auto;
+            border-radius: 10px; /* Optional: adds rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+        }
+
+
 
     </style>
 </head>
@@ -326,7 +373,9 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
         </nav>
     </header>
 
@@ -339,7 +388,7 @@
         </p>
         <a class="resume-button" href="Hriday_Raj_Resume.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
     </div>
-    <div id="about-skills" class="about-skills">
+    <div id="about" class="about-skills">
         <!-- About Section -->
         <div class="about">
             <img src="images/football.jpeg" alt="Personal Image" class="about-image">
@@ -384,50 +433,57 @@
     </div>
     
 </div>
-    <section class="experience">
-        <h2>Experience</h2>
-        <div class="experience-list">
-            <div class="experience-item">
-                <h3>Project Manager</h3>
-                <p>Willamette University Athletics | May 2024 - Present</p>
-                <p>
-                    Spearheaded defensive strategy analysis using HUDL, collaborating with coaches to align performance metrics with team objectives and effectively communicate actionable strategies to players.
-                </p>
-                <p>
-                    Designed and developed user-friendly visualizations of key performance metrics (e.g., pass pressures, coverages) on a web-based platform to support data-driven decision-making and enhance defensive tactics.
-                </p>
-                <p>
-                    Built and standardized a data pipeline to streamline metric analysis, improve data accuracy, and support ongoing strategy development.
-                </p>
-                <p>
-                    Managed team workflows and resources efficiently, resolving roadblocks and ensuring seamless collaboration to achieve strategic objectives.
-                </p>
-            </div>
-            <div class="experience-item">
-                <h3>Statistics and Data Structures Teacher’s Assistants, CS/DS Peer Tutor</h3>
-                <p>Willamette University | May 2024 - Present</p>
-                <p>
-                    Provided academic support to undergraduate students, simplifying complex concepts in statistics, computer science, and data science.
-                </p>
-                <p>
-                    Effectively identified and addressed student challenges to foster understanding.
-                </p>
-            </div>
-            <div class="experience-item">
-                <h3>AI/ML Intern</h3>
-                <p>Bahwan Cybertek | Jun 2023 - Aug 2023</p>
-                <p>
-                    Lowered operating costs by creating a custom keyword extractor in Python using natural language processing techniques for feedback management systems.
-                </p>
-                <p>
-                    Validated research with F-scores and optimized the keyword extraction algorithm for enhanced accuracy and performance.
-                </p>
-                <p>
-                    Documented research findings, methodologies, and recommendations to facilitate knowledge sharing and future improvements.
-                </p>
-            </div>
+<section id = "experience" class="experience">
+    <h2>Experience</h2>
+    <div class="experience-list">
+        <div class="experience-item">
+            <h3>Project Manager</h3>
+            <p>Willamette University Athletics | May 2024 - Present</p>
+            <p>
+                Spearheaded defensive strategy analysis using HUDL, collaborating with coaches to align performance metrics with team objectives and effectively communicate actionable strategies to players.
+            </p>
+            <p>
+                Designed and developed user-friendly visualizations of key performance metrics (e.g., pass pressures, coverages) on a web-based platform to support data-driven decision-making and enhance defensive tactics.
+            </p>
+            <p>
+                Built and standardized a data pipeline to streamline metric analysis, improve data accuracy, and support ongoing strategy development.
+            </p>
+            <p>
+                Managed team workflows and resources efficiently, resolving roadblocks and ensuring seamless collaboration to achieve strategic objectives.
+            </p>
         </div>
-    </section>
+
+        <div class="experience-item">
+            <h3>AI/ML Intern</h3>
+            <p>Bahwan Cybertek | Jun 2023 - Aug 2023</p>
+            <p>
+                Lowered operating costs by creating a custom keyword extractor in Python using natural language processing techniques for feedback management systems.
+            </p>
+            <p>
+                Validated research with F-scores and optimized the keyword extraction algorithm for enhanced accuracy and performance.
+            </p>
+            <p>
+                Documented research findings, methodologies, and recommendations to facilitate knowledge sharing and future improvements.
+            </p>
+        </div>
+    </div>
+
+    <!-- New Other Experience Section -->
+    <h2>Other Experience</h2>
+    <div class="experience-list">
+        <div class="experience-item">
+            <h3>Statistics and Data Structures Teacher’s Assistant, CS/DS Peer Tutor</h3>
+            <p>Willamette University | May 2024 - Present</p>
+            <p>
+                Provided academic support to undergraduate students, simplifying complex concepts in statistics, computer science, and data science.
+            </p>
+            <p>
+                Effectively identified and addressed student challenges to foster understanding.
+            </p>
+        </div>
+    </div>
+</section>
+
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2>Projects</h2>
@@ -439,12 +495,11 @@
                         Bankruptcy Visualization
                         <img src="https://www.r-project.org/Rlogo.png" alt="R Logo" class="project-logo">
                     </h3>
-                    <p>Change this</p> <!--TODO Change descriptions-->
+                    <p>Authored a comprehensive report analyzing bankruptcy trends, utilizing R to create visualizations that effectively communicate complex financial data.</p>
                     <a href="needlink" target="_blank">View Presentation</a>
                     <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/Bankruptcy_Visualization.html" target="_blank">View Code</a>
                 </div>
             </div>
-            
             <!-- Recommender Systems -->
             <div class="project-item">
                 <div>
@@ -455,26 +510,28 @@
 
                     <!-- TODO Change THESE LINKS-->
 
-
-
-                    <p>A collection of projects showcasing various recommender system techniques:</p>
+                    <p>A collection of projects demonstrating various recommender system techniques implemented in Python:</p>
                     <ul>
                         <li>
                             <h4>
-                                Apriori Algorithm
+                                Apriori Algorithms
                             </h4>
+                            <p>Implemented the Apriori algorithm to identify frequent itemsets and generate association rules for market basket analysis.</p>
+
                             <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/apriori_475.py" target="_blank">View Code</a>
                         </li>
                         <li>
                             <h4>
                                 Graphic Neural Network 
                             </h4>
+                            <p>Developed a Graph Neural Network model to enhance recommendation accuracy by capturing complex user-item interactions.</p>
                             <a href="needlink" target="_blank">View Code</a>
                         </li>
                         <li>
                             <h4>
                                 Singular Value Decomposition (Pure math not model)
                             </h4>
+                            <p>Explored the mathematical foundations of Singular Value Decomposition and its application in dimensionality reduction for recommender systems.</p>
                             <a href="needlink" target="_blank">View Presentation</a>
                         </li>
                     </ul>
@@ -488,12 +545,31 @@
                         Buddhabrot Visualization
                         <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo" class="project-logo">
                     </h3>
-                    <p>Implemented advanced visualization techniques for generating Buddhabrot fractals in C.</p> <!--TODO Change description-->
+                    <p>Implemented advanced visualization techniques for generating Buddhabrot fractals (variation of Mandelbrot fractals) in C.</p> <!--TODO Change description-->
                     <a href="https://github.com/Hriday04/Hriday04.github.io/blob/main/brot.c" target="_blank">View Code</a>
                 </div>
             </div>
         </div>
     </section>
+    <section id = "education" class="education">
+        <h2>Education</h2>
+        <div class="education-list">
+            <div class="education-item">
+                <h3>Willamette University</h3>
+                <p>Aug 2022 - Aug 2025</p>
+                <p>
+                    <strong>Degrees:</strong> M.S. Computer Science | B.S. Computer Science | B.S. Data Science | Minor in Mathematics and Statistics
+                </p>
+                <p>
+                    <strong>Activities:</strong> NCAA Division III Football, Statistics Teacher’s Assistant, Peer Tutor
+                </p>
+                
+            </div>        
+            <img src="images/prom.jpg" alt="Willamette Grad Photo" class="education-image">
+
+        </div>
+    </section>
+    
     
 
 
