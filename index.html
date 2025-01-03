@@ -161,12 +161,17 @@
         }
 
         /* Skills Section */
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust columns dynamically */
-            gap: 20px; /* Add space between grid items */
-            width: 50%; /* Maintain section width */
-        }
+            .skills {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust columns dynamically */
+                gap: 5px; /* Add space between grid items */
+                width: 35%; /* Maintain section width */
+                margin: 0 auto; /* Horizontally center the grid */
+                justify-content: center; /* Ensure the grid is centered */
+                align-items: center; /* Center items vertically */
+                padding: 1.5rem; /* Optional: Add some padding */
+            }
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -377,7 +382,9 @@
             <a href="#projects">Projects</a>
             <a href="#education">Education</a>
         </nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
+    
 
     <!-- Introduction Section -->
     <div id="home" class="intro">
