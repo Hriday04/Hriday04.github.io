@@ -1,366 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Hriday Raj</title>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            color: white;
-            scroll-behavior: smooth;
-            background-color: #000000;
-        }
-
-        /* Background Particles */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: #000;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-        }
-
-        header .links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        header .links a {
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: color 0.3s;
-        }
-
-        header .links a:hover {
-            color: #f05454;
-        }
-
-        header nav {
-            display: flex;
-            gap: 2rem;
-        }
-
-        header nav a {
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        header nav a:hover {
-            color: #f05454;
-        }
-
-        /* Introduction Section */
-        .intro {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            padding-top: 4rem;
-        }
-
-        .intro h1 {
-            font-size: 3rem;
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .intro h1 span {
-            color: #f05454;
-        }
-
-        .intro p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: white;
-        }
-
-        .resume-button {
-            text-decoration: none;
-            color: white;
-            border: 2px solid #f05454;
-            padding: 0.7rem 1.5rem;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-
-        .resume-button:hover {
-            background: #f05454;
-            color: white;
-        }
-
-        /* About Section */            
-        .about-skills {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 4rem 2rem;
-            background-color: #111;
-        }
-        .about {
-            width: 40%; /* Initial width for larger screens */
-            text-align: center; /* Center-align content */
-        }
-
-        .about-image {
-            width: 300px; /* Set a uniform width for all logos */
-            height: auto; /* Set a uniform height for all logos */
-            margin-bottom: 24px; /* Add spacing between the logo and text */    
-        }
-        .about h2 {
-            font-size: 2.5rem;
-            color: #f05454;
-            margin-bottom: 1.5rem;
-            text-align: center; /* Center-align the title */
-
-        }
-
-        .about p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            max-width: 800px;
-            color: #ddd;
-        }
-
-        /* Skills Section */
-            .skills {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust columns dynamically */
-                gap: 5px; /* Add space between grid items */
-                width: 35%; /* Maintain section width */
-                margin: 0 auto; /* Horizontally center the grid */
-                justify-content: center; /* Ensure the grid is centered */
-                align-items: center; /* Center items vertically */
-                padding: 1.5rem; /* Optional: Add some padding */
-            }
-
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .about-skills {
-                flex-direction: column; /* Stack sections vertically */
-                align-items: center; /* Center content */
-                gap: 2rem; /* Add spacing between sections */
-            }
-        }
-        .skills:nth-child(2) {
-            grid-template-columns: repeat(4, 1fr); /* Second row: 4 columns */
-        }
-        
-        .skill {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100px; /* Fixed width for square boxes */
-            height: 100px; /* Fixed height for square boxes */
-            border: 2px solid red; /* Red outline for boxes */
-            border-radius: 10px; /* Rounded corners */
-            background: transparent; /* Transparent background */
-            text-align: center;
-            font-size: 1rem; /* Text size for empty boxes */
-            color: white; /* Optional text color if needed */
-            transition: transform 0.3s ease; /* Optional hover effect */
-        }
-        .skill img {
-            width: 80%; /* Set a fixed width for the images */
-            height: auto; /* Maintain aspect ratio */
-            max-height: 50px; /* Ensure the height doesn’t exceed the box height */
-            object-fit: contain; /* Ensure the image fits within the box */
-            margin: 0; /* Remove extra margin around images */
-        }
-
-        .skill:hover {
-            transform: translateY(-5px); /* Subtle lift on hover */
-        }
-        
-        .skill p {
-            margin: 0; /* Remove margin for empty boxes */
-        }
-
-   
-
-        /* Projects Section */
-        .projects {
-            padding: 4rem 2rem;
-            background: #111;
-        }
-
-        .projects h2 {
-            font-size: 2.5rem;
-            color: #f05454;
-            margin-bottom: 2rem;
-        }
-
-        .project-list {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .project-item {
-            margin-bottom: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .project-item h3 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .project-item p {
-            margin: 0.5rem 0;
-            line-height: 1.5;
-        }
-        .project-logo {
-            width: 30px; /* Set a uniform width for all logos */
-            height: 30px; /* Set a uniform height for all logos */
-            margin-right: 10px; /* Add spacing between the logo and text */
-            vertical-align: middle; /* Align the logo with the text */
-        }
-
-        .project-item a {
-            text-decoration: none;
-            color: #f05454;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .project-item a:hover {
-            color: #fff;
-        }
-        /* Experience Section */
-        .experience {
-            padding: 4rem 2rem;
-            background: #111;
-        }
-
-        .experience h2 {
-            font-size: 2.5rem;
-            color: #f05454;
-            margin-bottom: 2rem;
-        }
-
-        .experience-list {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .experience-item {
-            margin-bottom: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .experience-item h3 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .experience-item p {
-            margin: 0.5rem 0;
-            line-height: 1.5;
-        }
-        /* Education Section */
-        .education {
-            padding: 4rem 2rem;
-            background: #111;
-        }
-
-        .education h2 {
-            font-size: 2.5rem;
-            color: #f05454;
-            margin-bottom: 2rem;
-        }
-
-        .education-list {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .education-item {
-            margin-bottom: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .education-item h3 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .education-item p {
-            margin: 0.5rem 0;
-            line-height: 1.5;
-            color: white;
-        }
-        .education-image {
-            display: block;
-            margin: 0 auto 1rem auto; /* Centers the image and adds space below */
-            width: 100%;
-            max-width: 300px; /* Adjust this value as needed */
-            height: auto;
-            border-radius: 10px; /* Optional: adds rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
-        }
-
-
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <!-- Particle.js container -->
     <div id="particles-js"></div>
-
-    <!-- TODO Potentially change all images to an image folder-->
 
     <!-- Header -->
     <header>
@@ -385,16 +34,14 @@
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
     
-
     <!-- Introduction Section -->
-    <div id="home" class="intro">
+    <section id="home" class="intro">
         <h1>Hello, I'm <span>Hriday.</span></h1>
-        <p>
-        Currently pursuing a Data Science and Computer Science double major <br>
-        and a Computer Science Masters.
-        </p>
+        <p>Currently pursuing a Data Science and Computer Science double major and a Computer Science Masters.</p>
         <a class="resume-button" href="Hriday_Raj_Resume.pdf" download="Hriday_Raj_Resume.pdf">Download Resume</a>
-    </div>
+    </section>
+
+    <!-- About Section -->
     <div id="about" class="about-skills">
         <!-- About Section -->
         <div class="about">
@@ -438,60 +85,62 @@
             </div>
         </div>
     </div>
-    
-</div>
-<section id = "experience" class="experience">
-    <h2>Experience</h2>
-    <div class="experience-list">
-        <div class="experience-item">
-            <h3>Project Manager</h3>
-            <p>Willamette University Athletics | May 2024 - Present</p>
-            <p>
-                Spearheaded defensive strategy analysis using HUDL, collaborating with coaches to align performance metrics with team objectives and effectively communicate actionable strategies to players.
-            </p>
-            <p>
-                Designed and developed user-friendly visualizations of key performance metrics (e.g., pass pressures, coverages) on a web-based platform to support data-driven decision-making and enhance defensive tactics.
-            </p>
-            <p>
-                Built and standardized a data pipeline to streamline metric analysis, improve data accuracy, and support ongoing strategy development.
-            </p>
-            <p>
-                Managed team workflows and resources efficiently, resolving roadblocks and ensuring seamless collaboration to achieve strategic objectives.
-            </p>
-        </div>
 
-        <div class="experience-item">
-            <h3>AI/ML Intern</h3>
-            <p>Bahwan Cybertek | Jun 2023 - Aug 2023</p>
-            <p>
-                Lowered operating costs by creating a custom keyword extractor in Python using natural language processing techniques for feedback management systems.
-            </p>
-            <p>
-                Validated research with F-scores and optimized the keyword extraction algorithm for enhanced accuracy and performance.
-            </p>
-            <p>
-                Documented research findings, methodologies, and recommendations to facilitate knowledge sharing and future improvements.
-            </p>
-        </div>
-    </div>
 
-    <!-- New Other Experience Section -->
-    <h2>Other Experience</h2>
-    <div class="experience-list">
-        <div class="experience-item">
-            <h3>Statistics and Data Structures Teacher’s Assistant, CS/DS Peer Tutor</h3>
-            <p>Willamette University | May 2024 - Present</p>
-            <p>
-                Provided academic support to undergraduate students, simplifying complex concepts in statistics, computer science, and data science.
-            </p>
-            <p>
-                Effectively identified and addressed student challenges to foster understanding.
-            </p>
-        </div>
-    </div>
-</section>
 
     <!-- Projects Section -->
+    <section id = "experience" class="experience">
+        <h2>Experience</h2>
+        <div class="experience-list">
+            <div class="experience-item">
+                <h3>Project Manager</h3>
+                <p>Willamette University Athletics | May 2024 - Present</p>
+                <p>
+                    Spearheaded defensive strategy analysis using HUDL, collaborating with coaches to align performance metrics with team objectives and effectively communicate actionable strategies to players.
+                </p>
+                <p>
+                    Designed and developed user-friendly visualizations of key performance metrics (e.g., pass pressures, coverages) on a web-based platform to support data-driven decision-making and enhance defensive tactics.
+                </p>
+                <p>
+                    Built and standardized a data pipeline to streamline metric analysis, improve data accuracy, and support ongoing strategy development.
+                </p>
+                <p>
+                    Managed team workflows and resources efficiently, resolving roadblocks and ensuring seamless collaboration to achieve strategic objectives.
+                </p>
+            </div>
+    
+            <div class="experience-item">
+                <h3>AI/ML Intern</h3>
+                <p>Bahwan Cybertek | Jun 2023 - Aug 2023</p>
+                <p>
+                    Lowered operating costs by creating a custom keyword extractor in Python using natural language processing techniques for feedback management systems.
+                </p>
+                <p>
+                    Validated research with F-scores and optimized the keyword extraction algorithm for enhanced accuracy and performance.
+                </p>
+                <p>
+                    Documented research findings, methodologies, and recommendations to facilitate knowledge sharing and future improvements.
+                </p>
+            </div>
+        </div>
+    
+        <!-- New Other Experience Section -->
+        <h2>Other Experience</h2>
+        <div class="experience-list">
+            <div class="experience-item">
+                <h3>Statistics and Data Structures Teacher’s Assistant, CS/DS Peer Tutor</h3>
+                <p>Willamette University | May 2024 - Present</p>
+                <p>
+                    Provided academic support to undergraduate students, simplifying complex concepts in statistics, computer science, and data science.
+                </p>
+                <p>
+                    Effectively identified and addressed student challenges to foster understanding.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+        <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2>Projects</h2>
         <div class="project-list">
@@ -576,95 +225,15 @@
 
         </div>
     </section>
-    
-    
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
-    <script>
-        /* Initialize Particle.js */
-        particlesJS('particles-js', {
-            particles: {
-                number: {
-                    value: 80,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: "#ffffff"
-                },
-                shape: {
-                    type: "circle",
-                    stroke: {
-                        width: 0,
-                        color: "#000000"
-                    },
-                },
-                opacity: {
-                    value: 0.5,
-                    random: false,
-                    anim: {
-                        enable: false,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                        enable: false,
-                        speed: 40,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#ffffff",
-                    opacity: 0.4,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 6,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: "repulse"
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: "push"
-                    },
-                    resize: true
-                },
-                modes: {
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4
-                    },
-                }
-            },
-            retina_detect: true
-        });
-    </script>
+    <script src="scripts.js"></script>
+    <script src="particles-config.js"></script>
 </body>
+<<<<<<< HEAD
 
+=======
+>>>>>>> be9fabb (Pruned firectory)
 </html>

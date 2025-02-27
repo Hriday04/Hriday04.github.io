@@ -1,0 +1,345 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+    background-color: #000000;
+}
+
+/* Background Particles */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #000;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header .links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+header .links a:hover {
+    color: #f05454;
+}
+
+header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #f05454;
+}
+
+/* Introduction Section */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.intro h1 span {
+    color: #f05454;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.resume-button {
+    text-decoration: none;
+    color: white;
+    border: 2px solid #f05454;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.resume-button:hover {
+    background: #f05454;
+    color: white;
+}
+
+/* About Section */            
+.about-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #111;
+}
+.about {
+    width: 40%; /* Initial width for larger screens */
+    text-align: center; /* Center-align content */
+}
+
+.about-image {
+    width: 300px; /* Set a uniform width for all logos */
+    height: auto; /* Set a uniform height for all logos */
+    margin-bottom: 24px; /* Add spacing between the logo and text */    
+}
+.about h2 {
+    font-size: 2.5rem;
+    color: #f05454;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Center-align the title */
+
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    color: #ddd;
+}
+
+/* Skills Section */
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust columns dynamically */
+        gap: 5px; /* Add space between grid items */
+        width: 35%; /* Maintain section width */
+        margin: 0 auto; /* Horizontally center the grid */
+        justify-content: center; /* Ensure the grid is centered */
+        align-items: center; /* Center items vertically */
+        padding: 1.5rem; /* Optional: Add some padding */
+    }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-skills {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center content */
+        gap: 2rem; /* Add spacing between sections */
+    }
+}
+.skills:nth-child(2) {
+    grid-template-columns: repeat(4, 1fr); /* Second row: 4 columns */
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Fixed width for square boxes */
+    height: 100px; /* Fixed height for square boxes */
+    border: 2px solid red; /* Red outline for boxes */
+    border-radius: 10px; /* Rounded corners */
+    background: transparent; /* Transparent background */
+    text-align: center;
+    font-size: 1rem; /* Text size for empty boxes */
+    color: white; /* Optional text color if needed */
+    transition: transform 0.3s ease; /* Optional hover effect */
+}
+.skill img {
+    width: 80%; /* Set a fixed width for the images */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 50px; /* Ensure the height doesn’t exceed the box height */
+    object-fit: contain; /* Ensure the image fits within the box */
+    margin: 0; /* Remove extra margin around images */
+}
+
+.skill:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.skill p {
+    margin: 0; /* Remove margin for empty boxes */
+}
+
+
+
+/* Projects Section */
+.projects {
+    padding: 4rem 2rem;
+    background: #111;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    color: #f05454;
+    margin-bottom: 2rem;
+}
+
+.project-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.project-item {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.project-item p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+.project-logo {
+    width: 30px; /* Set a uniform width for all logos */
+    height: 30px; /* Set a uniform height for all logos */
+    margin-right: 10px; /* Add spacing between the logo and text */
+    vertical-align: middle; /* Align the logo with the text */
+}
+
+.project-item a {
+    text-decoration: none;
+    color: #f05454;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project-item a:hover {
+    color: #fff;
+}
+/* Experience Section */
+.experience {
+    padding: 4rem 2rem;
+    background: #111;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    color: #f05454;
+    margin-bottom: 2rem;
+}
+
+.experience-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.experience-item {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.experience-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.experience-item p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+/* Education Section */
+.education {
+    padding: 4rem 2rem;
+    background: #111;
+}
+
+.education h2 {
+    font-size: 2.5rem;
+    color: #f05454;
+    margin-bottom: 2rem;
+}
+
+.education-list {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.education-item {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.education-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.education-item p {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+    color: white;
+}
+.education-image {
+    display: block;
+    margin: 0 auto 1rem auto; /* Centers the image and adds space below */
+    width: 100%;
+    max-width: 300px; /* Adjust this value as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+}
+
+
